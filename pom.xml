@@ -38,8 +38,6 @@
 	<commons.logging.version>1.1.3</commons.logging.version>
 	<commons.lang.version>2.6</commons.lang.version>
 	<commons.io.version>2.4</commons.io.version>
-	<commons.codec.version>1.5</commons.codec.version>
-	<commons.httpclient.version>3.1</commons.httpclient.version>
 	<commons.beanutils.version>1.9.2</commons.beanutils.version>
 	<!-- felix.http -->
     <org.apache.felix.http.version>2.3.2</org.apache.felix.http.version>
@@ -55,7 +53,6 @@
 	<com.tinkerpop.version>2.6.0</com.tinkerpop.version>
 	<google.guava.version>17.0</google.guava.version>
 	<net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
-	<net.sf.flexjson.version>2.1</net.sf.flexjson.version>
 	<json.simple.version>1.1.1</json.simple.version>
 	<jfree.jcommon.version>1.0.14</jfree.jcommon.version>
 	<olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
@@ -66,8 +63,7 @@
 	<osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
 	<!-- org.webjars -->
 	<angular.sanitize.version>1.5.8</angular.sanitize.version>
-	<underscorejs.version>1.7.0</underscorejs.version>
-	
+
 	<springframework-version>3.2.0</springframework-version>
 	
 	<org.apache.servicemix.bundles.xstream.version>1.4.9_1</org.apache.servicemix.bundles.xstream.version>

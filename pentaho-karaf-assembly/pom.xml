@@ -25,15 +25,13 @@
 	<activemq.karaf.version>5.10.0</activemq.karaf.version>
 	<cxf.karaf.version>3.0.7</cxf.karaf.version>
 	<camel.karaf.version>2.14.3</camel.karaf.version>
-	
+
 	<camel.guava.eventbus.version>2.14.3</camel.guava.eventbus.version>
 	<!-- commons -->
 	<commons.collections.version>3.2.2</commons.collections.version>
 	<commons.logging.version>1.1.3</commons.logging.version>
 	<commons.lang.version>2.6</commons.lang.version>
 	<commons.io.version>2.4</commons.io.version>
-	<commons.codec.version>1.5</commons.codec.version>
-	<commons.httpclient.version>3.1</commons.httpclient.version>
 	<commons.beanutils.version>1.9.2</commons.beanutils.version>
 	<!-- felix.http -->
     <org.apache.felix.http.version>2.3.2</org.apache.felix.http.version>
@@ -43,13 +41,12 @@
 	<eigenbase.properties.version>1.1.4</eigenbase.properties.version>
 	<!-- mongo db -->
 	<mongo.java.driver.version>2.13.0</mongo.java.driver.version>
-	
+
 	<com.github.zafarkhaja.version>0.9.0</com.github.zafarkhaja.version>
 	<com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
 	<com.tinkerpop.version>2.6.0</com.tinkerpop.version>
 	<google.guava.version>17.0</google.guava.version>
 	<net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
-	<net.sf.flexjson.version>2.1</net.sf.flexjson.version>
 	<json.simple.version>1.1.1</json.simple.version>
 	<jfree.jcommon.version>1.0.14</jfree.jcommon.version>
 	<olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
@@ -60,7 +57,6 @@
 	<osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
 	<!-- org.webjars -->
 	<angular.sanitize.version>1.5.8</angular.sanitize.version>
-	<underscorejs.version>1.7.0</underscorejs.version>
   </properties>
   <dependencies>
     <dependency>
@@ -164,6 +160,7 @@
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pdi-marketplace/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -202,6 +199,7 @@
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
