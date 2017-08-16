@@ -17,35 +17,10 @@
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
 
-    <!-- Overriding the default http feature -->
-    <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
-        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
-		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    </feature>
-
-    <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
-    <feature name="http-whiteboard" version="3.7.5" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
-        <feature>http</feature>
-        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
-		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    </feature>
-
-    <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
-    <feature name="pax-http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="3.1.4" resolver="(obr)">
-        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
-		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    </feature>
-
-    <!-- Overriding WAR to ensure that Jetty isn't started -->
-    <feature name="war" version="3.7.5" description="Turn Karaf as a full WebContainer" resolver="(obr)">
-        <feature>http</feature>
-		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    </feature>
-
     <feature name="pentaho-server" version="1.0">
         <feature>pentaho-base</feature>
         <feature>pentaho-client</feature>
-        <feature>http-whiteboard</feature>
+        <feature version="3.7.5-pentaho">http-whiteboard</feature>
         <feature version="[4,4.1.5)">spring</feature>
         <feature version="3.1.7.RELEASE">spring-security</feature>
 

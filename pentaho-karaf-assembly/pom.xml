@@ -168,10 +168,10 @@
               <features>
                 <feature>config</feature>
                 <feature>ssh</feature>
-                <feature>kar</feature>
-                <feature>http</feature>
-                <feature>cxf</feature>
-                <feature>war</feature>
+                <feature>kar/3.7.5-pentaho</feature>
+                <feature>http/3.7.5-pentaho</feature>
+                <feature>cxf/3.7.5-pentaho</feature>
+                <feature>war/3.7.5-pentaho</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>pdi-dataservice</feature>
@@ -207,13 +207,13 @@
                 <feature>config</feature>
                 <feature>ssh</feature>
                 <feature>management</feature>
-                <feature>kar</feature>
-                <feature>cxf</feature>
+                <feature>kar/3.7.5-pentaho</feature>
+                <feature>cxf/3.7.5-pentaho</feature>
                 <feature>camel-jms</feature>
                 <feature>camel</feature>
                 <feature>camel-blueprint</feature>
                 <feature>camel-stream</feature>
-                <feature>http</feature>
+                <feature>http/3.7.5-pentaho</feature>
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-dataservice</feature>
@@ -244,10 +244,10 @@
               <features>
                 <feature>config</feature>
                 <feature>ssh</feature>
-                <feature>kar</feature>
-                <feature>http</feature>
-                <feature>cxf</feature>
-                <feature>war</feature>
+                <feature>kar/3.7.5-pentaho</feature>
+                <feature>http/3.7.5-pentaho</feature>
+                <feature>cxf/3.7.5-pentaho</feature>
+                <feature>war/3.7.5-pentaho</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>build-helper</feature>
@@ -273,9 +273,9 @@
               <features>
                 <feature>config</feature>
                 <feature>ssh</feature>
-                <feature>kar</feature>
-                <feature>http</feature>
-                <feature>war</feature>
+                <feature>kar/3.7.5-pentaho</feature>
+                <feature>http/3.7.5-pentaho</feature>
+                <feature>war/3.7.5-pentaho</feature>
                 <feature>pentaho-client-minimal</feature>
                 <feature>pentaho-big-data-plugin-testless-osgi</feature>
                 <feature>pdi-dataservice-client</feature>
