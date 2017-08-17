@@ -186,7 +186,7 @@
   <feature name="pentaho-metaverse-web" version="${project.version}">
     <feature version="3.7.5-pentaho">http</feature>
     <feature version="3.7.5-pentaho">http-whiteboard</feature>
-    <feature version="3.7.5-pentaho">cxf</feature>
+    <feature version="${cxf.overriden.karaf.version}">cxf</feature>
 
     <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
@@ -225,12 +225,35 @@
   </feature>
   
    <!-- Overriding CXF to ensure that Jetty isn't started -->
-    <feature name="cxf" version="3.7.5-pentaho" resolver='(obr)'>
+    <feature name="cxf-http" version="${cxf.overriden.karaf.version}" resolver="(obr)">
+        <feature version="${cxf.karaf.version}">cxf-core</feature>
+        <feature version="3.7.5-pentaho">http-whiteboard</feature>
+        <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-transports-http/${cxf.karaf.version}</bundle>
+    </feature>
+    <feature name="cxf-jaxws" version="${cxf.overriden.karaf.version}" resolver="(obr)">
+        <feature version="${cxf.karaf.version}">cxf-wsdl</feature>
+        <feature version="${cxf.karaf.version}">cxf-databinding-jaxb</feature>
+        <feature version="${cxf.karaf.version}">cxf-bindings-soap</feature>
+        <feature version="${cxf.overriden.karaf.version}">cxf-http</feature>
+        <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-frontend-simple/${cxf.karaf.version}</bundle>
+        <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-frontend-jaxws/${cxf.karaf.version}</bundle>
+    </feature>
+    <feature name="cxf-jaxrs" version="${cxf.overriden.karaf.version}" resolver="(obr)">
+        <feature version="${cxf.karaf.version}">cxf-core</feature>
+        <feature version="${cxf.overriden.karaf.version}">cxf-http</feature>
+        <bundle start-level="30" dependency="true">mvn:org.codehaus.jettison/jettison/1.3.7</bundle>
+        <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-rs-extension-providers/${cxf.karaf.version}</bundle>
+        <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-rs-extension-search/${cxf.karaf.version}</bundle>
+        <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-rs-service-description/${cxf.karaf.version}</bundle>
+        <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-frontend-jaxrs/${cxf.karaf.version}</bundle>
+        <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-rs-client/${cxf.karaf.version}</bundle>
+    </feature>
+    <feature name="cxf" version="${cxf.overriden.karaf.version}" resolver='(obr)'>
         <feature version="[3,4)">spring</feature>
         <feature version="[1.2,2)">spring-dm</feature>
         <feature version="${cxf.karaf.version}">cxf-core</feature>
-        <feature version="${cxf.karaf.version}">cxf-jaxws</feature>
-        <feature version="${cxf.karaf.version}">cxf-jaxrs</feature>
+        <feature version="${cxf.overriden.karaf.version}">cxf-jaxws</feature>
+        <feature version="${cxf.overriden.karaf.version}">cxf-jaxrs</feature>
         <feature version="${cxf.karaf.version}">cxf-databinding-jaxb</feature>
         <feature version="${cxf.karaf.version}">cxf-databinding-aegis</feature>
         <feature version="${cxf.karaf.version}">cxf-databinding-xmlbeans</feature>
@@ -302,7 +325,7 @@
   </feature>
 
   <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
-  <feature name="pax-http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="3.1.4" resolver="(obr)">
+  <feature name="pax-http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="3.1.4-pentaho" resolver="(obr)">
       <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
       <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>

@@ -23,7 +23,6 @@
     <karaf.features.version>3.0.3</karaf.features.version>
 	<karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
 	<activemq.karaf.version>5.10.0</activemq.karaf.version>
-	<cxf.karaf.version>3.0.7</cxf.karaf.version>
 	<camel.karaf.version>2.14.3</camel.karaf.version>
 	
 	<camel.guava.eventbus.version>2.14.3</camel.guava.eventbus.version>
@@ -170,7 +169,7 @@
                 <feature>ssh</feature>
                 <feature>kar/3.7.5-pentaho</feature>
                 <feature>http/3.7.5-pentaho</feature>
-                <feature>cxf/3.7.5-pentaho</feature>
+                <feature>cxf/${cxf.overriden.karaf.version}</feature>
                 <feature>war/3.7.5-pentaho</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
@@ -208,7 +207,7 @@
                 <feature>ssh</feature>
                 <feature>management</feature>
                 <feature>kar/3.7.5-pentaho</feature>
-                <feature>cxf/3.7.5-pentaho</feature>
+                <feature>cxf/${cxf.overriden.karaf.version}</feature>
                 <feature>camel-jms</feature>
                 <feature>camel</feature>
                 <feature>camel-blueprint</feature>
@@ -246,7 +245,7 @@
                 <feature>ssh</feature>
                 <feature>kar/3.7.5-pentaho</feature>
                 <feature>http/3.7.5-pentaho</feature>
-                <feature>cxf/3.7.5-pentaho</feature>
+                <feature>cxf/${cxf.overriden.karaf.version}</feature>
                 <feature>war/3.7.5-pentaho</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>

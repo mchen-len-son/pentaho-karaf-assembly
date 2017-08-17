@@ -30,6 +30,7 @@
 	<karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
 	<activemq.karaf.version>5.10.0</activemq.karaf.version>
 	<cxf.karaf.version>3.0.7</cxf.karaf.version>
+	<cxf.overriden.karaf.version>3.0.7-pentaho</cxf.overriden.karaf.version>
 	<camel.karaf.version>2.14.3</camel.karaf.version>
 	
 	<camel.guava.eventbus.version>2.14.3</camel.guava.eventbus.version>
