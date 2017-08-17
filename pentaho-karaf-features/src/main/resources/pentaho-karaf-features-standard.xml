@@ -128,7 +128,7 @@
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
-    <feature>transaction</feature>
+    <feature version="1.0.0">transaction</feature>
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${project.version}</bundle>
     <bundle>mvn:pentaho/guava-cache-provider/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-ehcache-provider/${project.version}</bundle>
